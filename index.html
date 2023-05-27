@@ -1,71 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Page | Sneakers</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="container">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
         <div class="d-flex">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="./Img/icon-menu.svg" alt="Toogle button" class="open-nav-btn">
-                    <a href="index.html" class="text-dark--blue fw-bolder">sneakers</a>
-                </div>
-                <nav class="nav">
-                    <img src="./Img/icon-close.svg" alt="Close Navigation" class="close-nav-btn">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a href="#" class="nav_link">Collections</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">Men</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">Women</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">About</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">Contact</a></li>
-                    </ul>
-                </nav>
+          <div class="navbar">
+            <div class="logo">
+              <img
+                src="./Img/icon-menu.svg"
+                alt="Toggle button"
+                class="open-nav-btn"
+              />
+              <a href="index.html" class="text-dark--blue fw-bolder"
+                >sneakers</a
+              >
             </div>
-            <div class="cart">
-                <img src="./Img/icon-cart.svg" alt="Shopping Cart">
-                <img class="avatar" src="./Img/image-avatar.png" alt="User Image">
-            </div>
+            <nav class="nav">
+              <img
+                src="./Img/icon-close.svg"
+                alt="Close Navigation"
+                class="close-nav-btn"
+              />
+              <ul class="nav_list">
+                <li class="nav_item">
+                  <a href="#" class="nav_link">Collections</a>
+                </li>
+                <li class="nav_item"><a href="#" class="nav_link">Men</a></li>
+                <li class="nav_item"><a href="#" class="nav_link">Women</a></li>
+                <li class="nav_item"><a href="#" class="nav_link">About</a></li>
+                <li class="nav_item">
+                  <a href="#" class="nav_link">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="cart">
+            <img src="./Img/icon-cart.svg" alt="Shopping Cart" />
+            <img class="avatar" src="./Img/image-avatar.png" alt="User Image" />
+          </div>
         </div>
+      </div>
     </header>
     <main>
-        <section class="product">
-            <div class="product_image col">
-                <img src="./Img/image-product-1.jpg" alt="A sneaker">                
-                <img src="./Img/icon-next.svg" alt="Next button" class="next-btn">
-                <img src="./Img/icon-previous.svg" alt="Previous button" class="prev-btn">
+      <section class="product">
+        <div class="product_image col">
+          <img src="./Img/image-product-1.jpg" alt="A sneaker" />
+          <img src="./Img/icon-next.svg" alt="Next button" class="next-btn" />
+          <img
+            src="./Img/icon-previous.svg"
+            alt="Previous button"
+            class="prev-btn"
+          />
+        </div>
+        <div class="product_details container col">
+          <h3 class="text-orange">Sneaker company</h3>
+          <h1 class="product-title text-dark--blue my-3">
+            Fall Limited Edition <br />
+            Sneakers
+          </h1>
+          <p class="product-text">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="product-price d-flex fw-bolder">
+            <div>
+              <span class="disc-prod text-dark--blue">$125.00</span>
+              <span class="discount text-orange">50%</span>
             </div>
-            <div class="product_details container col">
-                <h3 class="text-orange">Sneaker company</h3>
-                <h1 class="product-title text-dark--blue my-3">Fall Limited Edition <br> Sneakers</h1>
-                <p class="product-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-                <div class="product-price d-flex fw-bolder">
-                    <div>
-                        <span class="disc-prod text-dark--blue">$125.00</span>
-                        <span class="discount text-orange">50%</span>
-                    </div>
-                    <p class="price">$250.00</p>
-                </div>
-                <div class="cta">
-                    <div class="addOn fw-bolder d-flex">
-                        <a href="#" class="text-orange">-</a >
-                        <a href="#" class="text-dark--blue">0</a >
-                        <a href="#" class="text-orange">+</a >
-                    </div>
-                    <div class="addOn addOn-cart fw-bolder d-flex">
-                        <img src="./Img/icon-cart-2.svg" alt="Cart Icon">
-                        <a href="#">Add to Cart</a>
-                    </div>
-                </div>
+            <p class="price">$250.00</p>
+          </div>
+          <div class="cta">
+            <div class="addOn fw-bolder d-flex">
+              <a href="#" class="text-orange">-</a>
+              <a href="#" class="text-dark--blue">0</a>
+              <a href="#" class="text-orange">+</a>
             </div>
-        </section>
+            <div class="addOn addOn-cart fw-bolder d-flex">
+              <img src="./Img/icon-cart-2.svg" alt="Cart Icon" />
+              <a href="#">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
