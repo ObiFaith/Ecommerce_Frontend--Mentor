@@ -6,6 +6,7 @@
     outline: none;
 }
 
+a{color: #fff; cursor: pointer;}
 body{
     font-size: 16px;
     font-family: 'Kumbh Sans', sans-serif;
@@ -36,9 +37,7 @@ header{padding: 1rem 0;}
 header img:nth-child(1){margin-right: .6em;}
 
 .logo,
-.disc-prod{
-    font-size: 1.6rem; 
-}
+.disc-prod{font-size: 1.6rem;}
 
 .nav{display: none;}
 .nav_item{font-weight: 700;}
@@ -48,21 +47,15 @@ header img:nth-child(1){margin-right: .6em;}
 .prev-btn,
 .next-btn{
     position: absolute;
-    top: 50%;
+    top: 40%;
     background-color: #fff;
     padding: .5rem .7em;
     border-radius: 50%;
 }
 .prev-btn{left: 10px;}
 .next-btn{right: 10px;}
-.product_details{padding: 2rem 0;}
-.product h3{
-    text-transform: uppercase;
-}
-
-.product-title{
-    font-size: 1.7rem;
-}
+.product h3{text-transform: uppercase;}
+.product-title{font-size: 1.7rem;}
 
 .product-text{
     line-height: 1.4;
@@ -94,7 +87,10 @@ header img:nth-child(1){margin-right: .6em;}
     box-shadow: 0 7px 15px hsl(26, 100%, 55%);    
     width: 100%;  
 }
-.addOn-cart a{color: #fff;}
+.addOn-cart:hover,
+.addOn-cart:focus,
+.thumbnails .active{opacity: .7;}
+.thumbnails{display: none;}
 
 @media (min-width: 576px){
     .container{max-width: 540px;} 
@@ -131,7 +127,7 @@ header img:nth-child(1){margin-right: .6em;}
     .nav_link{ color: hsl(219, 9%, 45%);}
 
     .col{width: 100%;}
-    .product{gap: 5em; padding-top: 2em}
+    .product{gap: 5em;}
     .product-title{font-size: 2rem; margin-bottom: 1.3em;}
     .product-price{
         flex-direction: column; 
@@ -141,4 +137,7 @@ header img:nth-child(1){margin-right: .6em;}
     .addOn:nth-child(1){gap: 1.5em; margin: 0;width: 35%;}   
     .addOn-cart{width: 60%;}
     .cta{align-items: center; margin-top: 1.5em;}
+    .sneaker,
+    .thumbnails img{border-radius: .8em;}    
+    .thumbnails{display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; margin-top: .8em;}
 }
