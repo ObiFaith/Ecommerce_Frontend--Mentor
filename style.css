@@ -14,15 +14,22 @@ body {
   color: hsl(219, 9%, 45%);
 }
 
+header {
+  position: relative;
+}
+
 img {
   max-width: 100%;
+  display: block;
 }
 ul {
   list-style: none;
 }
 
 .wrapper {
-  width: min(145ch, calc(100% - 4rem));
+  --_wrapper-height: 9vh;
+  width: min(150ch, calc(100% - 3.5rem));
+  min-height: var(--_wrapper-height);
   margin-inline: auto;
 }
 
@@ -51,26 +58,165 @@ ul {
   color: hsl(26, 100%, 55%);
 }
 
-header {
-  padding: 1rem 0;
-}
-header img:nth-child(1) {
-  margin-right: 0.6em;
-}
-
 .logo,
 .disc-prod {
   font-size: 1.6rem;
 }
 
 .nav {
+  width: 70%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  z-index: 10;
+  translate: -100%;
+  /* transition: translate 500ms ease-out; */
+}
+
+.nav_visible {
+  transition: translate 500ms ease-out;
+  translate: 0;
+}
+.nav_list {
+  margin-top: 4.3rem;
+}
+
+.open-nav-btn {
+  width: 1.3rem;
+  cursor: pointer;
+}
+
+.close-nav-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  width: 1.1rem;
+  color: hsl(219, 9%, 45%);
+  cursor: pointer;
   display: none;
 }
-.nav_item {
-  font-weight: 700;
+
+.nav.nav_visible .close-nav-btn {
+  display: block;
 }
+
+.nav_item {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 2rem;
+  font-weight: 700;
+  opacity: 0;
+}
+
+.nav_item:hover {
+  background-color: hsl(26, 100%, 55%);
+}
+
+.nav_link {
+  color: hsl(219, 9%, 45%);
+  font-size: 1.2rem;
+}
+
+.nav_item:hover .nav_link {
+  color: #fff;
+}
+
+@media (width > 660px) {
+  .wrapper {
+    --_wrapper-height: 9.5vh;
+  }
+
+  .nav {
+    position: static;
+    height: auto;
+    width: 100%;
+    display: block;
+    translate: 0;
+  }
+
+  .navbar {
+    gap: 2.5em;
+  }
+
+  .logo img,
+  .nav img {
+    display: none;
+  }
+
+  .nav_list {
+    margin-top: 0;
+  }
+
+  .nav_item {
+    padding: 0;
+    font-weight: 500;
+    opacity: 1;
+  }
+
+  .navbar,
+  .nav_list {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+  .nav_list {
+    gap: 1em;
+  }
+  .nav_item {
+    --_nav-item-padding-top: 1.3em;
+    --_nav-item-padding-bottom: 1em;
+    position: relative;
+    padding-block: var(--_nav-item-padding-top) var(--_nav-item-padding-bottom);
+    display: grid;
+    place-items: center;
+  }
+
+  .nav_item:hover {
+    background: none;
+  }
+  .nav_item:hover .nav_link {
+    color: #000;
+  }
+
+  .nav_item::after {
+    --_nav-item-padding: calc(var(--_nav-item-padding-bottom) + var(--_nav-item-padding-bottom));
+    --_hover-position: calc(var(--_wrapper-height) - var(--_nav-item-padding) - 3.2rem);
+    content: "";
+    position: absolute;
+    display: block;
+    /* change this when the wrapper height changes it doesn't work perfectly */
+    bottom: var(--_hover-position);
+    display: block;
+    height: 3px;
+    width: 0;
+    background: hsl(26, 100%, 55%);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav_item:hover::after {
+    width: 100%;
+  }
+  .nav_link {
+    font-size: 1.1rem;
+    color: hsl(219, 9%, 45%);
+  }
+}
+
+.logo,
+.cart {
+  gap: 0.5em;
+}
+
 .avatar {
-  width: 1.7rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  width: 2rem;
+}
+
+.avatar:hover {
+  border: 2px solid hsl(26, 100%, 55%);
 }
 
 .product_image {
@@ -152,6 +298,11 @@ header img:nth-child(1) {
   }
 }
 @media (min-width: 850px) {
+  .wrapper {
+      --_wrapper-height: 10vh;
+    border-bottom: 2px solid hsl(223, 64%, 98%);
+  }
+
   .container,
   main {
     max-width: 1440px;
@@ -159,7 +310,7 @@ header img:nth-child(1) {
     margin: 0 auto;
   }
   main {
-    border-top: 2px solid hsl(223, 64%, 98%);
+    /* border-top: 2px solid hsl(223, 64%, 98%); */
     padding: 5em 0;
   }
 
@@ -167,28 +318,20 @@ header img:nth-child(1) {
   .addOn-cart {
     margin: 0;
   }
-  header {
-    padding: 2em 0;
-  }
-  .logo img,
-  .nav img {
-    display: none;
+
+  .navbar {
+    gap: 3em;
   }
 
-  .nav {
-    display: block;
-    margin-left: 2em;
+  .nav_list {
+    gap: 1.5em;
   }
-  .navbar,
-  .nav_list,
+
   .product {
     display: flex;
     gap: 1em;
     justify-content: space-between;
     align-items: center;
-  }
-  .nav_link {
-    color: hsl(219, 9%, 45%);
   }
 
   .col {
@@ -220,5 +363,27 @@ header img:nth-child(1) {
   .cta {
     align-items: center;
     margin-top: 1.5em;
+  }
+}
+
+/* change this when the wrapper height changes it do         doesn't work perfectly */
+@media (min-width: 1200px) {
+  .wrapper {
+    --_wrapper-height: 12vh;
+  }
+  .nav_item::after {
+    bottom: calc(var(--_hover-position) - 2.055rem);
+  }
+}
+
+/* nav-item animation */
+@keyframes navLinkFadeIn {
+  from {
+    opacity: 0;
+    translate: -150px;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
   }
 }
