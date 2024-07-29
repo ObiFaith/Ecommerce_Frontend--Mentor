@@ -1,79 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Page | Sneakers</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="container">
-        <div class="d-flex">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="./Img/icon-menu.svg" alt="Toogle button">
-                    <a href="index.html" class="text-dark--blue fw-bolder">sneakers</a>
-                </div>
-                <nav class="nav">
-                    <img src="./Img/icon-close.svg" alt="Close Navigation">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a href="#" class="nav_link">Collections</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">Men</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">Women</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">About</a></li>
-                        <li class="nav_item"><a href="#" class="nav_link">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="cart">
-                <img src="./Img/icon-cart.svg" alt="Shopping Cart">
-                <img class="avatar" src="./Img/image-avatar.png" alt="User Image">
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="product">
-            <div class="product_image col">
-                <div>
-                    <img src="./Img/image-product-1.jpg" alt="A sneaker" class="sneaker">
-                    <img src="./Img/icon-next.svg" alt="Next button" class="next-btn">
-                    <img src="./Img/icon-previous.svg" alt="Previous button" class="prev-btn">
-                </div>
-                <div class="thumbnails">
-                    <img class="active" src="./Img/image-product-1-thumbnail.jpg" alt="Sneaker">
-                    <img src="./Img/image-product-2-thumbnail.jpg" alt="Sneaker">
-                    <img src="./Img/image-product-3-thumbnail.jpg" alt="Sneaker">
-                    <img src="./Img/image-product-4-thumbnail.jpg" alt="Sneaker">
-                </div>
-            </div>
-            <div class="product_details container col">
-                <h3 class="text-orange">Sneaker company</h3>
-                <h1 class="product-title text-dark--blue my-3">Fall Limited Edition <br> Sneakers</h1>
-                <p class="product-text">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-                <div class="product-price d-flex fw-bolder">
-                    <div>
-                        <span class="disc-prod text-dark--blue">$125.00</span>
-                        <span class="discount text-orange">50%</span>
-                    </div>
-                    <p class="price">$250.00</p>
-                </div>
-                <div class="cta">
-                    <div class="addOn fw-bolder d-flex">
-                        <a href="#" class="text-orange">-</a >
-                        <a href="#" class="text-dark--blue">0</a >
-                        <a href="#" class="text-orange">+</a >
-                    </div>
-                    <div class="addOn addOn-cart fw-bolder d-flex">
-                        <img src="./Img/icon-cart-2.svg" alt="Cart Icon">
-                        <a href="#">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Shopping Page | Sneakers</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="container">
+			<div class="d-flex">
+				<div class="navbar">
+					<div class="logo d-flex">
+						<div>
+							<img
+								src="./Img/icon-menu.svg"
+								alt="Toogle button"
+							/>
+						</div>
+						<a href="index.html" class="text-dark--blue fw-bolder"
+							>sneakers</a
+						>
+					</div>
+					<nav class="nav">
+						<img
+							src="./Img/icon-close.svg"
+							alt="Close Navigation"
+						/>
+						<ul class="nav_list">
+							<li class="nav_item">
+								<a href="#" class="nav_link">Collections</a>
+							</li>
+							<li class="nav_item">
+								<a href="#" class="nav_link">Men</a>
+							</li>
+							<li class="nav_item">
+								<a href="#" class="nav_link">Women</a>
+							</li>
+							<li class="nav_item">
+								<a href="#" class="nav_link">About</a>
+							</li>
+							<li class="nav_item">
+								<a href="#" class="nav_link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="cart d-flex">
+					<div>
+						<span class="qty">0</span>
+						<img
+							src="./Img/icon-cart.svg"
+							class="cart-icon"
+							alt="cart-icon"
+						/>
+					</div>
+					<div>
+						<img
+							class="avatar"
+							src="./Img/image-avatar.png"
+							alt="User Image"
+						/>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="product">
+				<div class="product_image col">
+					<div>
+						<img
+							src="./Img/image-product-1.jpg"
+							alt="A sneaker"
+							class="sneaker"
+						/>
+						<img
+							src="./Img/icon-next.svg"
+							alt="Next button"
+							class="next-btn"
+						/>
+						<img
+							src="./Img/icon-previous.svg"
+							alt="Previous button"
+							class="prev-btn"
+						/>
+					</div>
+					<div class="thumbnails">
+						<img
+							class="active"
+							src="./Img/image-product-1-thumbnail.jpg"
+							alt="Sneaker"
+						/>
+						<img
+							src="./Img/image-product-2-thumbnail.jpg"
+							alt="Sneaker"
+						/>
+						<img
+							src="./Img/image-product-3-thumbnail.jpg"
+							alt="Sneaker"
+						/>
+						<img
+							src="./Img/image-product-4-thumbnail.jpg"
+							alt="Sneaker"
+						/>
+					</div>
+				</div>
+				<div class="product_details container col">
+					<h3>Sneaker company</h3>
+					<h1 class="product-title text-dark--blue my-3">
+						Fall Limited Edition <br />
+						Sneakers
+					</h1>
+					<p class="product-text">
+						These low-profile sneakers are your perfect casual wear
+						companion. Featuring a durable rubber outer sole,
+						they'll withstand everything the weather can offer.
+					</p>
+					<div class="product-price d-flex fw-bolder">
+						<div class="d-flex">
+							<span class="disc-prod text-dark--blue"
+								>$125.00</span
+							>
+							<span class="discount">50%</span>
+						</div>
+						<p class="price">$250.00</p>
+					</div>
+					<div class="cta">
+						<div class="addOn fw-bolder d-flex">
+							<span class="text-orange">-</span>
+							<span class="text-dark--blue">0</span>
+							<span class="text-orange">+</span>
+						</div>
+						<div class="addOn addOn-cart fw-bolder d-flex">
+							<img src="./Img/icon-cart-2.svg" alt="Cart Icon" />
+							<a href="#">Add to Cart</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="./script.js"></script>
+	</body>
 </html>

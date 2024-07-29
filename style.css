@@ -1,143 +1,250 @@
-*::before, *, *::after{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    outline: none;
+*::before,
+*,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	outline: none;
 }
 
-a{color: #fff; cursor: pointer;}
-body{
-    font-size: 16px;
-    font-family: 'Kumbh Sans', sans-serif;
-    color: hsl(219, 9%, 45%);
+a,
+.addOn:first-child {
+	cursor: pointer;
+}
+body {
+	font-size: 16px;
+	font-family: 'Kumbh Sans', sans-serif;
+	color: hsl(219, 9%, 45%);
 }
 
-img{max-width: 100%;}
-ul{list-style: none;}
-
-.container{
-    width: 80%;
-    max-width: 375px;
-    margin: 0 auto;
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+ul {
+	list-style: none;
 }
 
-.d-flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
+	width: 80%;
+	max-width: 375px;
+	margin: 0 auto;
+	padding-block: 2rem;
 }
 
-.fw-bolder{font-weight: 700;}
-.my-3{margin: 1rem 0}
-.text-dark--blue{color: hsl(220, 13%, 13%);}
-.text-orange{color: hsl(26, 100%, 55%);}
+.d-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
-header{padding: 1rem 0;}
-header img:nth-child(1){margin-right: .6em;}
+.fw-bolder {
+	font-weight: 700;
+}
+.my-3 {
+	margin: 1rem 0;
+}
+.text-dark--blue {
+	color: hsl(220, 13%, 13%);
+}
+.text-orange {
+	color: hsl(26, 100%, 55%);
+}
 
-.logo,
-.disc-prod{font-size: 1.6rem;}
+.cart div:first-child,
+header img:nth-child(1) {
+	margin-right: 0.6em;
+}
 
-.nav{display: none;}
-.nav_item{font-weight: 700;}
-.avatar{width: 1.7rem;}
+.disc-prod {
+	font-size: 1.6rem;
+}
 
-.product_image{position: relative;}
+.nav,
+.qty,
+.thumbnails {
+	display: none;
+}
+.nav_item {
+	font-weight: 700;
+}
+.nav_link {
+	color: hsl(219, 9%, 45%);
+}
+.avatar {
+	width: 1.7rem;
+}
+
+.product_image,
+.cart div:first-child {
+	position: relative;
+}
+
+.qty,
 .prev-btn,
-.next-btn{
-    position: absolute;
-    top: 40%;
-    background-color: #fff;
-    padding: .5rem .7em;
-    border-radius: 50%;
-}
-.prev-btn{left: 10px;}
-.next-btn{right: 10px;}
-.product h3{text-transform: uppercase;}
-.product-title{font-size: 1.7rem;}
-
-.product-text{
-    line-height: 1.4;
-    letter-spacing: 1px;
+.next-btn {
+	position: absolute;
+	border-radius: 50%;
 }
 
-.discount{    
-    margin-left: 1rem;
-    background-color: hsl(25, 100%, 94%);
-    border-radius: .25rem;
-    padding: .3rem .5rem;
+.qty,
+.addOn-cart a {
+	color: #fff;
 }
 
-.price{text-decoration: line-through;}
+.qty {
+	right: -0.2rem;
+	top: -0.7rem;
+	background-color: red;
+	padding: 0.15rem 0.3rem 0.1rem;
+	font-size: 14px;
+	font-weight: 600;
+}
+.prev-btn,
+.next-btn {
+	top: 40%;
+	background-color: #fff;
+	padding: 0.5rem 0.7em;
+}
+.prev-btn {
+	left: 10px;
+}
+.next-btn {
+	right: 10px;
+}
+.product h3 {
+	text-transform: uppercase;
+}
+.logo,
+.product-title {
+	font-size: 1.7rem;
+}
+
+.product-text {
+	line-height: 1.4;
+	letter-spacing: 1px;
+}
+
+.discount {
+	margin-left: 1rem;
+	color: white;
+	background-color: hsl(220, 13%, 13%);
+	border-radius: 0.25rem;
+	padding: 0.3rem 0.5rem;
+}
+
+.price {
+	text-decoration: line-through;
+	padding-top: 0.5rem;
+}
 .product-price,
-.addOn{margin-top: 1em;}
-
-.addOn{
-    background-color: hsl(223, 64%, 98%);
-    border-radius: .5em;
-    font-size: 1.2rem;
-    padding: .7em 1em;
+.addOn {
+	margin-top: 1em;
 }
 
-.addOn-cart{
-    background-color: hsl(26, 100%, 55%);
-    justify-content: center;
-    gap: .5em;
-    box-shadow: 0 7px 15px hsl(26, 100%, 55%);    
-    width: 100%;  
+.addOn {
+	background-color: hsl(223, 64%, 98%);
+	border-radius: 0.5em;
+	font-size: 1.2rem;
+	padding: 0.7em 1em;
+}
+
+.addOn-cart {
+	background-color: hsl(26, 100%, 55%);
+	justify-content: center;
+	gap: 0.5em;
+	box-shadow: 0 3px 5px hsl(26, 100%, 55%);
+	width: 100%;
 }
 .addOn-cart:hover,
 .addOn-cart:focus,
-.thumbnails .active{opacity: .7;}
-.thumbnails{display: none;}
+.thumbnails .active {
+	opacity: 0.7;
+}
 
-@media (min-width: 576px){
-    .container{max-width: 540px;} 
-    .addOn{width: 100%;}
-    .cta{display: flex;gap: .9em;}
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+	.addOn {
+		width: 100%;
+	}
+	.cta {
+		display: flex;
+		gap: 0.9em;
+	}
 }
 @media (min-width: 900px) {
-    .container,
-    main{
-        max-width: 1440px;
-        width: 80%;
-        margin: 0 auto;
-    }
-    main{
-        border-top: 2px solid hsl(223, 64%, 98%);
-        padding: 5em 0;
-    }
+	.container,
+	main {
+		max-width: 1440px;
+		width: 80%;
+		margin: 0 auto;
+	}
+	main {
+		border-top: 2px solid hsl(223, 64%, 98%);
+		padding: 5em 0;
+	}
 
-    img,
-    .addOn-cart{margin: 0;}
-    header{padding: 2em 0;}
-    .logo img,
-    .nav img{display: none;}
-    
-    .nav{display: block; margin-left: 2em;}
-    .navbar,
-    .nav_list,
-    .product{
-        display: flex;
-        gap: 1em;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .nav_link{ color: hsl(219, 9%, 45%);}
+	img,
+	.addOn-cart {
+		margin: 0;
+	}
+	.logo img,
+	.nav img {
+		display: none;
+	}
 
-    .col{width: 100%;}
-    .product{gap: 5em;}
-    .product-title{font-size: 2rem; margin-bottom: 1.3em;}
-    .product-price{
-        flex-direction: column; 
-        align-items: flex-start;
-    }    
-    .product-text{margin-bottom: 1.5em;}
-    .addOn:nth-child(1){gap: 1.5em; margin: 0;width: 35%;}   
-    .addOn-cart{width: 60%;}
-    .cta{align-items: center; margin-top: 1.5em;}
-    .sneaker,
-    .thumbnails img{border-radius: .8em;}    
-    .thumbnails{display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; margin-top: .8em;}
+	.nav {
+		display: block;
+		margin-left: 2em;
+	}
+	.navbar,
+	.nav_list,
+	.product {
+		display: flex;
+		gap: 1em;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.col {
+		width: 100%;
+	}
+	.product {
+		gap: 5em;
+	}
+	.product-title {
+		font-size: 2rem;
+		padding-bottom: 0.5rem;
+	}
+	.product-price {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.product-text {
+		margin-bottom: 1.5em;
+	}
+	.addOn:nth-child(1) {
+		gap: 1.5em;
+		margin: 0;
+		width: 35%;
+	}
+	.addOn-cart {
+		width: 60%;
+	}
+	.cta {
+		align-items: center;
+		margin-top: 1.5em;
+	}
+	.sneaker,
+	.thumbnails img {
+		border-radius: 0.8em;
+	}
+	.thumbnails {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1em;
+		margin-top: 0.8em;
+	}
 }
