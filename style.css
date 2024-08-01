@@ -179,6 +179,11 @@ body,
 		gap: 0.9em;
 	}
 }
+@media (max-width: 900px) {
+	.modal {
+		display: none !important;
+	}
+}
 @media (min-width: 900px) {
 	.container,
 	main {
@@ -197,7 +202,6 @@ body,
 	.modal {
 		top: 0;
 		width: 100%;
-		display: none;
 		height: 100%;
 		position: absolute;
 		place-items: center;
