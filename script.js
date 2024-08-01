@@ -76,7 +76,7 @@ menu.addEventListener('click', () => {
 		nav_list.style.width = '100%';
 		nav_list.style.textAlign = 'center';
 	} else {
-		nav.style.display = 'none';
+		navSm.style.display = 'none';
 		menu.src = menu.src.replace('close', 'menu');
 	}
 });
