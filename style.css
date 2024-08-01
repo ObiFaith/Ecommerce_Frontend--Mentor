@@ -9,6 +9,7 @@
 }
 
 a,
+.addOn-cart span,
 .addOn:first-child {
 	cursor: pointer;
 }
@@ -63,6 +64,7 @@ header img:nth-child(1) {
 
 .nav,
 .qty,
+.nav-sm,
 .thumbnails {
 	display: none;
 }
@@ -76,6 +78,8 @@ header img:nth-child(1) {
 	width: 1.7rem;
 }
 
+body,
+.modal-box,
 .product_image,
 .cart div:first-child {
 	position: relative;
@@ -89,7 +93,7 @@ header img:nth-child(1) {
 }
 
 .qty,
-.addOn-cart a {
+.addOn-cart span {
 	color: #fff;
 }
 
@@ -103,15 +107,15 @@ header img:nth-child(1) {
 }
 .prev-btn,
 .next-btn {
-	top: 40%;
+	top: 45%;
 	background-color: #fff;
 	padding: 0.5rem 0.7em;
 }
 .prev-btn {
-	left: 10px;
+	left: 15px;
 }
 .next-btn {
-	right: 10px;
+	right: 15px;
 }
 .product h3 {
 	text-transform: uppercase;
@@ -162,6 +166,21 @@ header img:nth-child(1) {
 .thumbnails .active {
 	opacity: 0.7;
 }
+.modal {
+	top: 0;
+	width: 100%;
+	display: none;
+	height: 100%;
+	position: absolute;
+	place-items: center;
+	background-color: rgba(3, 3, 3, 0.9);
+}
+
+.modal .sneaker {
+	width: 100%;
+	height: 650px;
+	transition: display 3s ease-in-out;
+}
 
 @media (min-width: 576px) {
 	.container {
@@ -186,7 +205,9 @@ header img:nth-child(1) {
 		border-top: 2px solid hsl(223, 64%, 98%);
 		padding: 5em 0;
 	}
-
+	.nav-sm {
+		display: none !important;
+	}
 	img,
 	.addOn-cart {
 		margin: 0;
@@ -195,7 +216,6 @@ header img:nth-child(1) {
 	.nav img {
 		display: none;
 	}
-
 	.nav {
 		display: block;
 		margin-left: 2em;
